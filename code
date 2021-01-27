@@ -6,7 +6,7 @@ const getRandBase = () => {
 }
 
 // Returns a random single strand of DNA containing 15 bases
-//---------------------------------------------------------
+//----------------------------------------------------------
 const mockUpStrand = () => {
   const newStrand = []
   for (let i = 0; i < 15; i++) {
@@ -32,8 +32,9 @@ function pAequorFactory(number, basesArray) {
       return this.dna[randomIndex] = newBase
     },
 
- //The compareDNA() method compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common. It's only considered a match if the same base is found in the same place.
- //--------------------------------------------------------------------------------------------
+ //The compareDNA() method compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common.
+ //It's only considered a match if the same base is found in the same place.
+ //-----------------------------------------------------------------------------------------------------------------------------------------------
     compareDNA(specimen) {
       let matches = 0
       let currentIndex = 0
