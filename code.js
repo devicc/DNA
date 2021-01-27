@@ -15,6 +15,9 @@ const mockUpStrand = () => {
   return newStrand
 }
 
+//Factory function that creates an object (a specimen in this case) with the provided parameters
+//----------------------------------------------------------------------------------------------
+
 function pAequorFactory(number, basesArray) {
   return {
     specimenNum: number,
