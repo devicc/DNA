@@ -20,8 +20,8 @@ function pAequorFactory(number, basesArray) {
     specimenNum: number,
     dna: basesArray,
   
-  //mutate() randomly selects a base in the object's DNA property and changes it to a different one
-  //-----------------------------------------------------------------------------------------------
+//mutate() randomly selects a base in the object's DNA property and changes it to a different one
+//-----------------------------------------------------------------------------------------------
     mutate() {
       const randomIndex = Math.floor(Math.random() * this.dna.length)
       const oldBase = this.dna[randomIndex]
@@ -32,8 +32,8 @@ function pAequorFactory(number, basesArray) {
       return this.dna[randomIndex] = newBase
     },
 
-    //The compareDNA() method compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common. It's only considered a match if the same base is found in the same place.
-    //--------------------------------------------------------------------------------------------
+ //The compareDNA() method compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common. It's only considered a match if the same base is found in the same place.
+ //--------------------------------------------------------------------------------------------
     compareDNA(specimen) {
       let matches = 0
       let currentIndex = 0
