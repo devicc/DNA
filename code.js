@@ -6,7 +6,7 @@ const getRandBase = () => {
 }
 
 // Returns a random single strand of DNA containing 15 bases
-//----------------------------------------------------------
+//---------------------------------------------------------
 const mockUpStrand = () => {
   const newStrand = []
   for (let i = 0; i < 15; i++) {
@@ -14,9 +14,6 @@ const mockUpStrand = () => {
   }
   return newStrand
 }
-
-//Factory function that creates an object (a specimen in this case) with the provided parameters
-//----------------------------------------------------------------------------------------------
 
 function pAequorFactory(number, basesArray) {
   return {
@@ -35,20 +32,26 @@ function pAequorFactory(number, basesArray) {
       return this.dna[randomIndex] = newBase
     },
 
- //The compareDNA() method compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common.
- //It's only considered a match if the same base is found in the same place.
- //-----------------------------------------------------------------------------------------------------------------------------------------------
+//The compareDNA() method compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common. It's only considered a match if the same base is found in the same place.
+//--------------------------------------------------------------------------------------------
     compareDNA(specimen) {
       let matches = 0
-      let currentIndex = 0
-      this.dna.forEach(element => {
-        if (specimen.dna.includes(element) && this.dna.indexOf(element, currentIndex) === specimen.dna.indexOf(element, currentIndex)) {
+      this.dna.forEach((element, currentIndex) => {
+        if (element === specimen.dna[currentIndex]) {
           matches++
           console.log(`${this.dna[currentIndex]} matches ${specimen.dna[currentIndex]} at ${currentIndex}`)
-        }
-        currentIndex++
+          }
       })
-      console.log (`Specimens have ${Math.floor((matches / this.dna.length) * 100)}% DNA in common`)
+      if (matches > 0) {
+        console.log (`Specimens have ${Math.floor((matches / this.dna.length) * 100)}% DNA in common.`)
+      } else {
+          console.log("No matches were found.")
+          console.log (`Specimens have ${Math.floor((matches / this.dna.length) * 100)}% DNA in common.`)
+      }
+    },
+
+    willLikelySurvive() {
+      //TODO
     }
   }
 }
