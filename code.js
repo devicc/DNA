@@ -32,7 +32,7 @@ function pAequorFactory(number, basesArray) {
       return this.dna[randomIndex] = newBase
     },
 
-//The compareDNA() method compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common. It's only considered a match if the same base is found in the same place.
+//compareDNA() compares the current specimen's DNA with another one and logs the percentage of DNA that both specimens have in common. It's only considered a match if the same base is found in the same place.
 //--------------------------------------------------------------------------------------------
     compareDNA(specimen) {
       let matches = 0
@@ -46,7 +46,7 @@ function pAequorFactory(number, basesArray) {
         console.log (`Specimens have ${Math.floor((matches / this.dna.length) * 100)}% DNA in common.`)
       } else {
           console.log("No matches were found.")
-          console.log (`Specimens have ${Math.floor((matches / this.dna.length) * 100)}% DNA in common.`)
+          console.log ("Specimens don't have DNA in common.")
       }
     },
 
